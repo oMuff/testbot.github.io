@@ -1,0 +1,95 @@
+@import '../core/colors.sass';
+
+.rich-select {
+	align-items: initial !important;
+	padding-top: 0;
+	padding-bottom: 0;
+	min-width: 200px; }
+
+.rich-select label {
+	width: 100%;
+	line-height: 2em; }
+
+.Select > .Select-menu-outer,
+.Select-control,
+.Select.is-open > .Select-control,
+.Select.is-focused > .Select-control,
+.Select.is-focused:not(.is-open) > .Select-control, {
+	background-color: $input-color; }
+
+.Select--multi {
+	.Select-value {
+		line-height: 28px !important; } }
+
+.Select--single {
+	.Select-control {
+		.Select-value {
+			line-height: 46px !important; } } }
+
+.Select-control {
+	background-color: $input-color !important;
+	box-shadow: rgba(72, 75, 81, 0.15) 0px 1px 0px 0px inset !important;
+	border: none !important;
+	padding: 0.4em 0.2em;
+	.Select-value, .Select-placeholder {
+		line-height: 46px; }
+	.Select-clear {
+		transition: color 0.3s;
+		padding-top: 4.5px; }
+	&:hover {
+		background-color: lighten($input-color, 3%) !important;
+		input {
+			background-color: lighten($input-color, 3%); } } }
+
+.Select {
+	.Select-control {
+		.Select-multi-value-wrapper > .Select-value > .Select-value-label {
+			color: #ccc !important; } }
+	.Select-input > input {
+		background: transparent !important;
+		color: #ccc; }
+	.Select-menu-outer {
+		border-color: transparent;
+		.Select-option {
+			background-color: transparent;
+			color: #ccc;
+			box-shadow: rgba(72, 75, 81, 0.15) 0px 1.5px 0px 0px inset;
+			border-radius: 0;
+			border: none;
+			padding: 0.6em 0.7em;
+			font-weight: 400;
+			font-size: 16px;
+			&:hover {
+				background-color: lighten($input-color, 8%); } } }
+	&.Select--multi {
+		.Select-control > .Select-multi-value-wrapper > .Select-value {
+			margin-bottom: 0.3em !important;
+			margin-top: 0.3em !important; } } }
+
+.automod-selector.rich-select {
+	padding: 0.5em 1em;
+	@media (max-width: 1200px) {
+		width: 47%; }
+	@media (max-width: 769px) {
+		width: 99%; } }
+
+.Select-control {
+	// caret-color: transparent;
+ }	// cursor: default !important;
+
+.Select > .Select-control > .Select-multi-value-wrapper > .Select-value {
+	color: #ccc;
+	.Select-value-label {
+		color: #ccc; } }
+
+.Select--multi .Select-value {
+	margin-top: 4px; }
+
+.Select--multi {
+	.Select-value-icon {
+		padding: 3px 5px 1px; } }
+
+.Select.is-disabled {
+	.Select-control {
+		background-color: darken($input-color, 4%) !important;
+		color: gray; } }
